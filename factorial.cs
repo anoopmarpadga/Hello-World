@@ -10,7 +10,7 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            int n = 0;
+            int n = 100;
             int i, f=1;
 
             if (n <= 0)
