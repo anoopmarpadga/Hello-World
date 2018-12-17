@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <h2>Local media files:</h2>
+    <!--<!--<div>
+        <video title="local video file" playsinline controls loop preload="metadata">
+            <source src="chrome.mp4" type="video/mp4" />
+            <p>This browser does not support the video element.</p>
+        </video>
+    </div>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>-->
+    <!--<script type="text/javascript">
+        function playVideo(sourceId, targetId) {
+            if (typeof (sourceId) == 'string') { sourceId = document.getElementById(sourceId); }
+            if (typeof (targetId) == 'string') { targetId = document.getElementById(targetId); }
+            targetId.innerHTML = sourceId.innerHTML;
+            return false;
+        }
+    </script>
+
+    <div id="6"></div>
+
+    <div id="1" style="display: none">
+        <video width="320" height="240" controls="controls">
+            <source src="chrome.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="2" style="display: none">
+        <video width="320" height="240" controls="controls">
+            <source src="chrome.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <select onchange='return playVideo("1","6")'>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>-->
+
+
+    <table>
+        <tr>
+            <td>
+                <select id="videoSelect"  onchange="myFunction()">
+                    <option value="0">none </option>
+                    <option value="1">chrome </option>
+                    <option value="2">youtube</option>
+                   
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <video id="theVideo" width="300px" height="202px" controls="" >
+                    <source src="" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+/*      
+	  $(document).ready(function () {
+            $("#videoSelect").change(function () {
+                var videoValue = $(this).val();
+
+                if (videoValue == 1) {
+                    console.log("Inside" + videoValue);
+                    $("#video2").attr('src', 'chrome.mp4');
+                }
+                else if (videoValue == 2) {
+                    console.log("Inside" + videoValue);
+                    $("#video2").attr('src', 'chrome.mp4');
+                }
+                else {
+                    console.log("Inside" + videoValue);
+                    $("#video2").attr('src', 'chrome.mp4');
+                }
+
+            });
+        });
+	*/	
+		function myFunction() 
+		
+		{
+		
+		
+    var x = document.getElementById("videoSelect").value;
+	
+	var theVid = document.getElementById("theVideo");
+	
+  //  document.getElementById("demo").innerHTML = "You selected: " + x;
+		
+            if (x == 1) {
+
+
+                theVid.src = "chrome.mp4";
+
+            }
+            if (x == 2) {
+
+                theVid.src = "tests.mp4";    
+            }
+
+
+
+		}
+		
+    </script>
+
+
+
+
+
+
+
+    <!--<a href="#" onclick='return playVideo("1","6")'>Play Video 1</a>
+    <a href="#" onclick='return playVideo("2","6")'>Play Video 2</a>-->
+
+
+</body>
+</html>
