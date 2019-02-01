@@ -1,17 +1,36 @@
 <html>
 <head>
+  <script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <button onclick="vibrate()">Vibrate</button>
-
+<button onclick="vibrateonall()">Vibrate for all</button>
+  <button onclick="vibratejquery()">Vibrate jquery</button>
 </body>
 
 <script>
+  
 function vibrate()
 {
 alert("Let me vibrate");
 window.navigator.vibrate(2000); 
 }
+  function vibrateonall()
+  {
+    var canVibrate = "vibrate" in navigator || "mozVibrate" in navigator;
+
+if (canVibrate && !("vibrate" in navigator))
+    navigator.vibrate = navigator.mozVibrate;
+  }
+  
+  function vibratejquery()
+  {
+    var isMobile = (/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent);
+
+$(".button").on(isMobile ? 'touchstart' : 'mousedown', function(e) {
+    navigator.vibrate(2000); // Infinity is a number
+});
+  }
 </script>
 
 </html>
