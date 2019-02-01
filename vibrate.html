@@ -10,11 +10,32 @@
 
 <script>
   
-function vibrate()
+/*function vibrate()
 {
 alert("Let me vibrate");
 window.navigator.vibrate(2000); 
-}
+}*/
+ 
+   function vibrate() 
+ {
+
+            if ("vibrate" in navigator) 
+            {
+                // vibration API supported
+
+                alert("Let me vibrate");
+                window.navigator.vibrate(2000);
+            }
+            else
+            {
+                alert("Not supported");
+            }
+        }
+ 
+ 
+ 
+ 
+ 
   function vibrateonall()
   {
     var canVibrate = "vibrate" in navigator || "mozVibrate" in navigator;
