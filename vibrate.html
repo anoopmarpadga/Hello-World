@@ -19,8 +19,11 @@ window.navigator.vibrate(2000);
    function vibrate() 
  {
 
-            if ("vibrate" in navigator) 
-            {
+           // if ("vibrate" in navigator) 
+          //  {
+             
+             if (typeof window.navigator.vibrate == 'function')
+             { 
                 // vibration API supported
 
                 alert("Let me vibrate");
